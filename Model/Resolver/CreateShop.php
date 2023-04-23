@@ -10,7 +10,7 @@ use Magento\Framework\GraphQl\Exception\GraphQlNoSuchEntityException;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 
-class Shopfinder implements ResolverInterface
+class CreateShop implements ResolverInterface
 {
     /**
      * @var Hsoni\Shopfinder\Model\Resolver\DataProvider\Shopfinder
@@ -36,11 +36,13 @@ class Shopfinder implements ResolverInterface
         array $value = null,
         array $args = null
     ) {
-        if (empty($args['identifier']) && empty($args['shopfinder_id'])) {
-            $shopfinderData = $this->shopfinderDataProvider->getShopfinderList($args['pageSize'], $args['pageNo']);
-        }else{
-            $shopfinderData = $this->shopfinderDataProvider->getShopfinder($args);    
+        if (empty($args['input']) || !is_array($args['input'])) {
+            throw new GraphQlInputException(__('"input" value should be specified'));
         }
+        if (empty($args['input']['identifier'])) {
+            throw new GraphQlInputException(__('Shop Identifier is mandatory.'));
+        }
+        $shopfinderData = $this->shopfinderDataProvider->createShop($args['input']);
         return $shopfinderData;
     }
 }

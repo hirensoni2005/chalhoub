@@ -9,22 +9,14 @@ use Magento\Framework\GraphQl\Exception\GraphQlInputException;
 use Magento\Framework\GraphQl\Exception\GraphQlNoSuchEntityException;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
+use Magento\Framework\GraphQl\Exception\GraphQlAuthorizationException;
 
-class Shopfinder implements ResolverInterface
+class DeleteShop implements ResolverInterface
 {
     /**
      * @var Hsoni\Shopfinder\Model\Resolver\DataProvider\Shopfinder
      */
     private $shopfinderDataProvider;
-
-    /**
-     * @param DataProvider\Shopfinder $shopfinderRepository
-     */
-    public function __construct(
-        \Hsoni\Shopfinder\Model\Resolver\DataProvider\Shopfinder $shopfinderDataProvider
-    ) {
-        $this->shopfinderDataProvider = $shopfinderDataProvider;
-    }
 
     /**
      * @inheritdoc
@@ -36,11 +28,9 @@ class Shopfinder implements ResolverInterface
         array $value = null,
         array $args = null
     ) {
-        if (empty($args['identifier']) && empty($args['shopfinder_id'])) {
-            $shopfinderData = $this->shopfinderDataProvider->getShopfinderList($args['pageSize'], $args['pageNo']);
-        }else{
-            $shopfinderData = $this->shopfinderDataProvider->getShopfinder($args);    
+        if (empty($args) || !is_array($args)) {
+            throw new GraphQlInputException(__('"input" value should be specified'));
         }
-        return $shopfinderData;
+        throw new GraphQlAuthorizationException(__('User is not authorized to delete operation.'));
     }
 }

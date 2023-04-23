@@ -3,7 +3,10 @@ type Query {
         shopfinder_id: Int @doc(description: "Query by shopfinder_id.")
         identifier: String @doc(description: "Query by Shopp identifier.")
     ) : Shopfinder @resolver( class: "\\Hsoni\\Shopfinder\\Model\\Resolver\\Shopfinder")
-    shopfinderList: ShopfinderList @resolver ( class: "\\Hsoni\\Shopfinder\\Model\\Resolver\\Shopfinder")
+    shopfinderList (
+        pageSize: Int = 10 @doc(description: "How many items should show on the page")
+        pageNo: Int = 1 @doc(description: "Allows to using paging it start with 1")
+    ) : ShopfinderList @resolver ( class: "\\Hsoni\\Shopfinder\\Model\\Resolver\\Shopfinder")
 }
 
 type ShopfinderList @doc(description: "Shopfinder List") {
@@ -22,7 +25,13 @@ type Shopfinder {
 
 
 type Mutation {
-    editShopfinder(input: shopfinderInput!): ShopfinderOutput @resolver(class: "\\Hsoni\\Shopfinder\\Model\\Resolver\\ShopfinderUpdate") @doc(description:"Notify your interest")
+    createShop(input: shopfinderInput!): Shopfinder @resolver(class: "\\Hsoni\\Shopfinder\\Model\\Resolver\\CreateShop") @doc(description:"Create new shop")
+
+    updateShop(input: shopfinderInput!): ShopfinderOutput @resolver(class: "\\Hsoni\\Shopfinder\\Model\\Resolver\\ShopfinderUpdate") @doc(description:"Update Shop")
+
+    deleteShop(
+        shopfinder_id: Int @doc(description: "Shop id.")
+    ): ShopfinderOutput @resolver(class: "Hsoni\\ShopFinder\\Model\\Resolver\\DeleteShop") @doc(description: "Delete Shop")
 }
 
 input shopfinderInput {

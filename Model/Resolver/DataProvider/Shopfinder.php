@@ -82,9 +82,13 @@ class Shopfinder
      * @return array
      * @throws GraphQlNoSuchEntityException
      */
-    public function getShopfinderList()
+    public function getShopfinderList($pageSize, $pageNo)
     {
-        $shopList = $this->shopfinderRepositoryInterface->getList($this->searchCriteriaBuilder->create());
+        $searchCriteria = $this->searchCriteriaBuilder->create();
+        $searchCriteria->setCurrentPage($pageNo);
+        $searchCriteria->setPageSize($pageSize);
+
+        $shopList = $this->shopfinderRepositoryInterface->getList($searchCriteria);
         if(!count($shopList->getItems()) > 0){
             throw new GraphQlNoSuchEntityException(__("No Records available."));
         }
@@ -144,5 +148,24 @@ class Shopfinder
         }
         $response['message'] = __("Shop details are updated sucessfully!");
         return $response;
+    }
+
+    /**
+     * Create Shop Details
+     * @param array $args
+     * @return array
+     * @throws GraphQlNoSuchEntityException
+     */
+    public function createShop($input): array
+    {
+        $shopData = $this->shopFinder->create();
+        $shopData->setData($input);
+        try{
+            $shop = $this->shopfinderRepositoryInterface->save($shopData);
+        } catch (NoSuchEntityException $e) 
+        {
+            throw new GraphQlNoSuchEntityException(__($e->getMessage()), $e);
+        }
+        return $this->convertShopData($shop);
     }
 }
