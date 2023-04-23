@@ -5,7 +5,7 @@
 The extension must be installed via `composer`. To proceed, run these commands in your terminal:
 
 ```
-composer require hiren/module-shopfinder
+composer require hsoni/module-shopfinder
 php bin/magento module:enable Hsoni_Shopfinder
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
