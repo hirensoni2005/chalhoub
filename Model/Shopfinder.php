@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Model;
+namespace Hsoni\Shopfinder\Model;
 
-use Chalhoub\Shopfinder\Api\Data\ShopfinderInterface;
+use Hsoni\Shopfinder\Api\Data\ShopfinderInterface;
 use Magento\Framework\Model\AbstractModel;
 
 class Shopfinder extends AbstractModel implements ShopfinderInterface
@@ -14,7 +14,7 @@ class Shopfinder extends AbstractModel implements ShopfinderInterface
      */
     public function _construct()
     {
-        $this->_init(\Chalhoub\Shopfinder\Model\ResourceModel\Shopfinder::class);
+        $this->_init(\Hsoni\Shopfinder\Model\ResourceModel\Shopfinder::class);
     }
 
     /**

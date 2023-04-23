@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Block\Adminhtml\Index;
+namespace Hsoni\Shopfinder\Block\Adminhtml\Index;
 
 class Index extends \Magento\Backend\Block\Template
 {

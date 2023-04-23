@@ -1,45 +1,45 @@
 <?xml version="1.0" ?>
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
 	<route url="/V1/chalhoub-shopfinder/shopfinder" method="GET">
-		<service class="Chalhoub\Shopfinder\Api\ShopfinderManagementInterface" method="getShopfinder"/>
+		<service class="Hsoni\Shopfinder\Api\ShopfinderManagementInterface" method="getShopfinder"/>
 		<resources>
 			<resource ref="anonymous"/>
 		</resources>
 	</route>
 	<route url="/V1/chalhoub-shopfinder/shopfinder" method="PUT">
-		<service class="Chalhoub\Shopfinder\Api\ShopfinderManagementInterface" method="putShopfinder"/>
+		<service class="Hsoni\Shopfinder\Api\ShopfinderManagementInterface" method="putShopfinder"/>
 		<resources>
 			<resource ref="anonymous"/>
 		</resources>
 	</route>
 	<route url="/V1/chalhoub-shopfinder/shopfinder" method="POST">
-		<service class="Chalhoub\Shopfinder\Api\ShopfinderRepositoryInterface" method="save"/>
+		<service class="Hsoni\Shopfinder\Api\ShopfinderRepositoryInterface" method="save"/>
 		<resources>
-			<resource ref="Chalhoub_Shopfinder::Shopfinder_save"/>
+			<resource ref="Hsoni_Shopfinder::Shopfinder_save"/>
 		</resources>
 	</route>
 	<route url="/V1/chalhoub-shopfinder/shopfinder/search" method="GET">
-		<service class="Chalhoub\Shopfinder\Api\ShopfinderRepositoryInterface" method="getList"/>
+		<service class="Hsoni\Shopfinder\Api\ShopfinderRepositoryInterface" method="getList"/>
 		<resources>
 			<resource ref="anonymous"/>
 		</resources>
 	</route>
 	<route url="/V1/chalhoub-shopfinder/shopfinder/:shopfinderId" method="GET">
-		<service class="Chalhoub\Shopfinder\Api\ShopfinderRepositoryInterface" method="get"/>
+		<service class="Hsoni\Shopfinder\Api\ShopfinderRepositoryInterface" method="get"/>
 		<resources>
 			<resource ref="anonymous"/>
 		</resources>
 	</route>
 	<route url="/V1/chalhoub-shopfinder/shopfinder/:shopfinderId" method="PUT">
-		<service class="Chalhoub\Shopfinder\Api\ShopfinderRepositoryInterface" method="save"/>
+		<service class="Hsoni\Shopfinder\Api\ShopfinderRepositoryInterface" method="save"/>
 		<resources>
-			<resource ref="Chalhoub_Shopfinder::Shopfinder_update"/>
+			<resource ref="Hsoni_Shopfinder::Shopfinder_update"/>
 		</resources>
 	</route>
 	<route url="/V1/chalhoub-shopfinder/shopfinder/:shopfinderId" method="DELETE">
-		<service class="Chalhoub\Shopfinder\Api\ShopfinderRepositoryInterface" method="deleteById"/>
+		<service class="Hsoni\Shopfinder\Api\ShopfinderRepositoryInterface" method="deleteById"/>
 		<resources>
-			<resource ref="Chalhoub_Shopfinder::Shopfinder_delete"/>
+			<resource ref="Hsoni_Shopfinder::Shopfinder_delete"/>
 		</resources>
 	</route>
 </routes>

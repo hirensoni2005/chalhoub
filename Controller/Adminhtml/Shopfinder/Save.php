@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder;
+namespace Hsoni\Shopfinder\Controller\Adminhtml\Shopfinder;
 
 use Magento\Framework\Exception\LocalizedException;
 
@@ -20,12 +20,12 @@ class Save extends \Magento\Backend\App\Action
     /**
      * @param \Magento\Backend\App\Action\Context $context
      * @param \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor
-     * @param \Chalhoub\Shopfinder\Model\Shopfinder $shopFinder
+     * @param \Hsoni\Shopfinder\Model\Shopfinder $shopFinder
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor,
-        \Chalhoub\Shopfinder\Model\ShopfinderFactory $shopFinder
+        \Hsoni\Shopfinder\Model\ShopfinderFactory $shopFinder
     ) {
         $this->dataPersistor = $dataPersistor;
         $this->shopFinder	 = $shopFinder;

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Model\Resolver;
+namespace Hsoni\Shopfinder\Model\Resolver;
 
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\GraphQl\Config\Element\Field;
@@ -13,7 +13,7 @@ use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 class Shopfinder implements ResolverInterface
 {
     /**
-     * @var Chalhoub\Shopfinder\Model\Resolver\DataProvider\Shopfinder
+     * @var Hsoni\Shopfinder\Model\Resolver\DataProvider\Shopfinder
      */
     private $shopfinderDataProvider;
 
@@ -21,7 +21,7 @@ class Shopfinder implements ResolverInterface
      * @param DataProvider\Shopfinder $shopfinderRepository
      */
     public function __construct(
-        \Chalhoub\Shopfinder\Model\Resolver\DataProvider\Shopfinder $shopfinderDataProvider
+        \Hsoni\Shopfinder\Model\Resolver\DataProvider\Shopfinder $shopfinderDataProvider
     ) {
         $this->shopfinderDataProvider = $shopfinderDataProvider;
     }

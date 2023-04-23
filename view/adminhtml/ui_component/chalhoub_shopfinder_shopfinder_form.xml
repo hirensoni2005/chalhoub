@@ -9,10 +9,10 @@
 	</argument>
 	<settings>
 		<buttons>
-			<button name="back" class="Chalhoub\Shopfinder\Block\Adminhtml\Shopfinder\Edit\BackButton"/>
-			<button name="delete" class="Chalhoub\Shopfinder\Block\Adminhtml\Shopfinder\Edit\DeleteButton"/>
-			<button name="save" class="Chalhoub\Shopfinder\Block\Adminhtml\Shopfinder\Edit\SaveButton"/>
-			<button name="save_and_continue" class="Chalhoub\Shopfinder\Block\Adminhtml\Shopfinder\Edit\SaveAndContinueButton"/>
+			<button name="back" class="Hsoni\Shopfinder\Block\Adminhtml\Shopfinder\Edit\BackButton"/>
+			<button name="delete" class="Hsoni\Shopfinder\Block\Adminhtml\Shopfinder\Edit\DeleteButton"/>
+			<button name="save" class="Hsoni\Shopfinder\Block\Adminhtml\Shopfinder\Edit\SaveButton"/>
+			<button name="save_and_continue" class="Hsoni\Shopfinder\Block\Adminhtml\Shopfinder\Edit\SaveAndContinueButton"/>
 		</buttons>
 		<namespace>chalhoub_shopfinder_shopfinder_form</namespace>
 		<dataScope>data</dataScope>
@@ -29,7 +29,7 @@
 		<settings>
 			<submitUrl path="*/*/save"/>
 		</settings>
-		<dataProvider name="shopfinder_form_data_source" class="Chalhoub\Shopfinder\Ui\Component\Form\DataProvider">
+		<dataProvider name="shopfinder_form_data_source" class="Hsoni\Shopfinder\Ui\Component\Form\DataProvider">
 			<settings>
 				<requestFieldName>shopfinder_id</requestFieldName>
 				<primaryFieldName>shopfinder_id</primaryFieldName>
@@ -92,7 +92,7 @@
 					<item name="visible" xsi:type="boolean">true</item>
 					<item name="formElement" xsi:type="string">fileUploader</item>
 					<item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
-					<item name="previewTmpl" xsi:type="string">Chalhoub_Shopfinder/shop-image</item>
+					<item name="previewTmpl" xsi:type="string">Hsoni_Shopfinder/shop-image</item>
 					<item name="validation" xsi:type="array">
 						<item name="required-entry" xsi:type="boolean">true</item>
 					</item>

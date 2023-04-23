@@ -90,7 +90,7 @@
 				</item>
 			</argument>
 		</column>
-		<column name="image" class="Chalhoub\Shopfinder\Ui\Component\Listing\Column\ImageThumbnail" 
+		<column name="image" class="Hsoni\Shopfinder\Ui\Component\Listing\Column\ImageThumbnail" 
 			component="Magento_Ui/js/grid/columns/thumbnail" sortOrder="0" displayArea="generalarea">
 			<argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -126,7 +126,7 @@
 				</editor>
 			</settings>
 		</column>
-		<actionsColumn name="actions" class="Chalhoub\Shopfinder\Ui\Component\Listing\Column\ShopfinderActions">
+		<actionsColumn name="actions" class="Hsoni\Shopfinder\Ui\Component\Listing\Column\ShopfinderActions">
 			<settings>
 				<indexField>shopfinder_id</indexField>
 				<resizeEnabled>false</resizeEnabled>

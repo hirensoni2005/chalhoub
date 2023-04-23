@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Ui\Component\Form;
+namespace Hsoni\Shopfinder\Ui\Component\Form;
 
-use Chalhoub\Shopfinder\Model\ResourceModel\Shopfinder\CollectionFactory;
+use Hsoni\Shopfinder\Model\ResourceModel\Shopfinder\CollectionFactory;
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Ui\DataProvider\AbstractDataProvider;
 use Magento\Store\Model\StoreManagerInterface;

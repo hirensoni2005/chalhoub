@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder;
+namespace Hsoni\Shopfinder\Controller\Adminhtml\Shopfinder;
 
-class Delete extends \Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder
+class Delete extends \Hsoni\Shopfinder\Controller\Adminhtml\Shopfinder
 {
     /**
      * @var ShopfinderFactory
@@ -13,12 +13,12 @@ class Delete extends \Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder
     /**
      * @param \Magento\Backend\App\Action\Context $context
      * @param \Magento\Framework\Registry $coreRegistry
-     * @param \Chalhoub\Shopfinder\Model\Shopfinder $shopFinder
+     * @param \Hsoni\Shopfinder\Model\Shopfinder $shopFinder
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\Registry $coreRegistry,
-        \Chalhoub\Shopfinder\Model\ShopfinderFactory $shopFinder
+        \Hsoni\Shopfinder\Model\ShopfinderFactory $shopFinder
     ) {
         $this->shopFinder = $shopFinder;
         parent::__construct($context, $coreRegistry);

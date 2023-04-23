@@ -3,14 +3,14 @@
 	<acl>
 		<resources>
 			<resource id="Magento_Backend::admin">
-				<resource id="Chalhoub_Shopfinder::shopfinder" title="shopfinder" sortOrder="10">
-					<resource id="Chalhoub_Shopfinder::index_index" title="index index" sortOrder="10"/>
+				<resource id="Hsoni_Shopfinder::shopfinder" title="shopfinder" sortOrder="10">
+					<resource id="Hsoni_Shopfinder::index_index" title="index index" sortOrder="10"/>
 				</resource>
-				<resource id="Chalhoub_Shopfinder::Shopfinder" title="Shopfinder" sortOrder="10">
-					<resource id="Chalhoub_Shopfinder::Shopfinder_save" title="Save Shopfinder" sortOrder="10"/>
-					<resource id="Chalhoub_Shopfinder::Shopfinder_delete" title="Delete Shopfinder" sortOrder="20"/>
-					<resource id="Chalhoub_Shopfinder::Shopfinder_update" title="Update Shopfinder" sortOrder="30"/>
-					<resource id="Chalhoub_Shopfinder::Shopfinder_view" title="View Shopfinder" sortOrder="40"/>
+				<resource id="Hsoni_Shopfinder::Shopfinder" title="Shopfinder" sortOrder="10">
+					<resource id="Hsoni_Shopfinder::Shopfinder_save" title="Save Shopfinder" sortOrder="10"/>
+					<resource id="Hsoni_Shopfinder::Shopfinder_delete" title="Delete Shopfinder" sortOrder="20"/>
+					<resource id="Hsoni_Shopfinder::Shopfinder_update" title="Update Shopfinder" sortOrder="30"/>
+					<resource id="Hsoni_Shopfinder::Shopfinder_view" title="View Shopfinder" sortOrder="40"/>
 				</resource>
 			</resource>
 		</resources>

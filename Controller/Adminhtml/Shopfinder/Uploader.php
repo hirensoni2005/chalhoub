@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder;
+namespace Hsoni\Shopfinder\Controller\Adminhtml\Shopfinder;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\Controller\ResultFactory;

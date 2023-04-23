@@ -1,21 +1,21 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-	<preference for="Chalhoub\Shopfinder\Api\ShopfinderManagementInterface" type="Chalhoub\Shopfinder\Model\ShopfinderManagement"/>
-	<preference for="Chalhoub\Shopfinder\Api\ShopfinderRepositoryInterface" type="Chalhoub\Shopfinder\Model\ShopfinderRepository"/>
-	<preference for="Chalhoub\Shopfinder\Api\Data\ShopfinderInterface" type="Chalhoub\Shopfinder\Model\Shopfinder"/>
-	<preference for="Chalhoub\Shopfinder\Api\Data\ShopfinderSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<preference for="Hsoni\Shopfinder\Api\ShopfinderManagementInterface" type="Hsoni\Shopfinder\Model\ShopfinderManagement"/>
+	<preference for="Hsoni\Shopfinder\Api\ShopfinderRepositoryInterface" type="Hsoni\Shopfinder\Model\ShopfinderRepository"/>
+	<preference for="Hsoni\Shopfinder\Api\Data\ShopfinderInterface" type="Hsoni\Shopfinder\Model\Shopfinder"/>
+	<preference for="Hsoni\Shopfinder\Api\Data\ShopfinderSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
 	
 	<!-- Admin Grid-->
-	<virtualType name="Chalhoub\Shopfinder\Model\ResourceModel\Shopfinder\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+	<virtualType name="Hsoni\Shopfinder\Model\ResourceModel\Shopfinder\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
 		<arguments>
 			<argument name="mainTable" xsi:type="string">shopfinder</argument>
-			<argument name="resourceModel" xsi:type="string">Chalhoub\Shopfinder\Model\ResourceModel\Shopfinder\Collection</argument>
+			<argument name="resourceModel" xsi:type="string">Hsoni\Shopfinder\Model\ResourceModel\Shopfinder\Collection</argument>
 		</arguments>
 	</virtualType>
 	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
 		<arguments>
 			<argument name="collections" xsi:type="array">
-				<item name="chalhoub_shopfinder_shopfinder_listing_data_source" xsi:type="string">Chalhoub\Shopfinder\Model\ResourceModel\Shopfinder\Grid\Collection</item>
+				<item name="chalhoub_shopfinder_shopfinder_listing_data_source" xsi:type="string">Hsoni\Shopfinder\Model\ResourceModel\Shopfinder\Grid\Collection</item>
 			</argument>
 		</arguments>
 	</type>
@@ -33,7 +33,7 @@
 			</argument>
 		</arguments>
 	</virtualType>
-	<type name="Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder\Uploader">
+	<type name="Hsoni\Shopfinder\Controller\Adminhtml\Shopfinder\Uploader">
 		<arguments>
 			<argument name="imageUploader" xsi:type="object">VirtualTypeName</argument>
 		</arguments>

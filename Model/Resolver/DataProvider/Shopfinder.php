@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Model\Resolver\DataProvider;
+namespace Hsoni\Shopfinder\Model\Resolver\DataProvider;
 
-use Chalhoub\Shopfinder\Api\Data\ShopfinderInterface;
+use Hsoni\Shopfinder\Api\Data\ShopfinderInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\GraphQl\Exception\GraphQlInputException;
 use Magento\Framework\GraphQl\Exception\GraphQlNoSuchEntityException;
@@ -31,14 +31,14 @@ class Shopfinder
     protected $storeManager;
     
     /**
-     * @param \Chalhoub\Shopfinder\Api\ShopfinderRepositoryInterface $shopfinderRepositoryInterface
-     * @param \Chalhoub\Shopfinder\Model\Shopfinder $shopFinder
+     * @param \Hsoni\Shopfinder\Api\ShopfinderRepositoryInterface $shopfinderRepositoryInterface
+     * @param \Hsoni\Shopfinder\Model\Shopfinder $shopFinder
      * @param \Magento\Framework\Api\SearchCriteriaBuilder $searchCriteriaBuilder
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      */
     public function __construct(
-        \Chalhoub\Shopfinder\Api\ShopfinderRepositoryInterface $shopfinderRepositoryInterface,
-        \Chalhoub\Shopfinder\Model\ShopfinderFactory $shopFinder,
+        \Hsoni\Shopfinder\Api\ShopfinderRepositoryInterface $shopfinderRepositoryInterface,
+        \Hsoni\Shopfinder\Model\ShopfinderFactory $shopFinder,
         \Magento\Framework\Api\SearchCriteriaBuilder $searchCriteriaBuilder,
         \Magento\Store\Model\StoreManagerInterface $storeManager
     )
@@ -133,10 +133,10 @@ class Shopfinder
         }elseif(isset($input['identifier'])) {
             $shop = $this->shopFinder->create()->load($input['identifier'], 'identifier');
         }
-        
         if(!$shop->getShopfinderId()){
             throw new GraphQlNoSuchEntityException(__("Shop couldn't found with identifier."));
         }
+        $input['shopfinder_id'] = $shop->getShopfinderId();
         try{
             $shop->setData($input)->save();
         } catch (NoSuchEntityException $e) {

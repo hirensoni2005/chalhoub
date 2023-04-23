@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Controller\Adminhtml\Index;
+namespace Hsoni\Shopfinder\Controller\Adminhtml\Index;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultInterface;

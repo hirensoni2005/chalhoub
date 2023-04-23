@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Ui\Component\Listing\Column;
+namespace Hsoni\Shopfinder\Ui\Component\Listing\Column;
 
 class ShopfinderActions extends \Magento\Ui\Component\Listing\Columns\Column
 {

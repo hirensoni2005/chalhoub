@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder;
+namespace Hsoni\Shopfinder\Controller\Adminhtml\Shopfinder;
 
-class NewAction extends \Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder
+class NewAction extends \Hsoni\Shopfinder\Controller\Adminhtml\Shopfinder
 {
 
     /**

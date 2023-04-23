@@ -2,8 +2,8 @@ type Query {
     shopfinder (
         shopfinder_id: Int @doc(description: "Query by shopfinder_id.")
         identifier: String @doc(description: "Query by Shopp identifier.")
-    ) : Shopfinder @resolver( class: "Chalhoub\\Shopfinder\\Model\\Resolver\\Shopfinder")
-    shopfinderList: ShopfinderList @resolver ( class: "Chalhoub\\Shopfinder\\Model\\Resolver\\Shopfinder")
+    ) : Shopfinder @resolver( class: "\\Hsoni\\Shopfinder\\Model\\Resolver\\Shopfinder")
+    shopfinderList: ShopfinderList @resolver ( class: "\\Hsoni\\Shopfinder\\Model\\Resolver\\Shopfinder")
 }
 
 type ShopfinderList @doc(description: "Shopfinder List") {
@@ -22,7 +22,7 @@ type Shopfinder {
 
 
 type Mutation {
-    editShopfinder(input: shopfinderInput!): ShopfinderOutput @resolver(class: "\\Chalhoub\\Shopfinder\\Model\\Resolver\\ShopfinderUpdate") @doc(description:"Notify your interest")
+    editShopfinder(input: shopfinderInput!): ShopfinderOutput @resolver(class: "\\Hsoni\\Shopfinder\\Model\\Resolver\\ShopfinderUpdate") @doc(description:"Notify your interest")
 }
 
 input shopfinderInput {

@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Model;
+namespace Hsoni\Shopfinder\Model;
 
-use Chalhoub\Shopfinder\Api\Data\ShopfinderInterface;
-use Chalhoub\Shopfinder\Api\Data\ShopfinderInterfaceFactory;
-use Chalhoub\Shopfinder\Api\Data\ShopfinderSearchResultsInterfaceFactory;
-use Chalhoub\Shopfinder\Api\ShopfinderRepositoryInterface;
-use Chalhoub\Shopfinder\Model\ResourceModel\Shopfinder as ResourceShopfinder;
-use Chalhoub\Shopfinder\Model\ResourceModel\Shopfinder\CollectionFactory as ShopfinderCollectionFactory;
+use Hsoni\Shopfinder\Api\Data\ShopfinderInterface;
+use Hsoni\Shopfinder\Api\Data\ShopfinderInterfaceFactory;
+use Hsoni\Shopfinder\Api\Data\ShopfinderSearchResultsInterfaceFactory;
+use Hsoni\Shopfinder\Api\ShopfinderRepositoryInterface;
+use Hsoni\Shopfinder\Model\ResourceModel\Shopfinder as ResourceShopfinder;
+use Hsoni\Shopfinder\Model\ResourceModel\Shopfinder\CollectionFactory as ShopfinderCollectionFactory;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;

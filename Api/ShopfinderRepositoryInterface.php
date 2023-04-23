@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Api;
+namespace Hsoni\Shopfinder\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
@@ -10,18 +10,18 @@ interface ShopfinderRepositoryInterface
 
     /**
      * Save Shopfinder
-     * @param \Chalhoub\Shopfinder\Api\Data\ShopfinderInterface $shopfinder
-     * @return \Chalhoub\Shopfinder\Api\Data\ShopfinderInterface
+     * @param \Hsoni\Shopfinder\Api\Data\ShopfinderInterface $shopfinder
+     * @return \Hsoni\Shopfinder\Api\Data\ShopfinderInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function save(
-        \Chalhoub\Shopfinder\Api\Data\ShopfinderInterface $shopfinder
+        \Hsoni\Shopfinder\Api\Data\ShopfinderInterface $shopfinder
     );
 
     /**
      * Retrieve Shopfinder
      * @param string $shopfinderId
-     * @return \Chalhoub\Shopfinder\Api\Data\ShopfinderInterface
+     * @return \Hsoni\Shopfinder\Api\Data\ShopfinderInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function get($shopfinderId);
@@ -29,7 +29,7 @@ interface ShopfinderRepositoryInterface
     /**
      * Retrieve Shopfinder matching the specified criteria.
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
-     * @return \Chalhoub\Shopfinder\Api\Data\ShopfinderSearchResultsInterface
+     * @return \Hsoni\Shopfinder\Api\Data\ShopfinderSearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getList(
@@ -38,12 +38,12 @@ interface ShopfinderRepositoryInterface
 
     /**
      * Delete Shopfinder
-     * @param \Chalhoub\Shopfinder\Api\Data\ShopfinderInterface $shopfinder
+     * @param \Hsoni\Shopfinder\Api\Data\ShopfinderInterface $shopfinder
      * @return bool true on success
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function delete(
-        \Chalhoub\Shopfinder\Api\Data\ShopfinderInterface $shopfinder
+        \Hsoni\Shopfinder\Api\Data\ShopfinderInterface $shopfinder
     );
 
     /**

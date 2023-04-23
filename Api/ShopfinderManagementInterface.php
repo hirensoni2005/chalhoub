@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Api;
+namespace Hsoni\Shopfinder\Api;
 
 interface ShopfinderManagementInterface
 {

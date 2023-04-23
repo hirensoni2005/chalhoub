@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
 	<menu>
-		<add id="Chalhoub_Shopfinder::chalhoub_shopfinder_shopfinder" title="Shopfinder" translate="title" module="Chalhoub_Shopfinder" sortOrder="100" resource="Magento_Backend::content" parent="Magento_Backend::content_elements" action="chalhoub_shopfinder/shopfinder/index"/>
+		<add id="Hsoni_Shopfinder::chalhoub_shopfinder_shopfinder" title="Shopfinder" translate="title" module="Hsoni_Shopfinder" sortOrder="100" resource="Magento_Backend::content" parent="Magento_Backend::content_elements" action="chalhoub_shopfinder/shopfinder/index"/>
 	</menu>
 </config>

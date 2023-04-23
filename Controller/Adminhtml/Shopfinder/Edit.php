@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder;
+namespace Hsoni\Shopfinder\Controller\Adminhtml\Shopfinder;
 
-class Edit extends \Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder
+class Edit extends \Hsoni\Shopfinder\Controller\Adminhtml\Shopfinder
 {
     /**
      * @var \Magento\Framework\View\Result\PageFactory
@@ -11,7 +11,7 @@ class Edit extends \Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder
     protected $resultPageFactory;
 
     /**
-     * @var \Chalhoub\Shopfinder\Model\ShopfinderFactory
+     * @var \Hsoni\Shopfinder\Model\ShopfinderFactory
      */
     protected $shopFinder;
 
@@ -19,13 +19,13 @@ class Edit extends \Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder
      * @param \Magento\Backend\App\Action\Context $context
      * @param \Magento\Framework\Registry $coreRegistry
      * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
-     * @param \Chalhoub\Shopfinder\Model\Shopfinder $shopFinder
+     * @param \Hsoni\Shopfinder\Model\Shopfinder $shopFinder
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\Registry $coreRegistry,
         \Magento\Framework\View\Result\PageFactory $resultPageFactory,
-        \Chalhoub\Shopfinder\Model\ShopfinderFactory $shopFinder
+        \Hsoni\Shopfinder\Model\ShopfinderFactory $shopFinder
     ) {
         $this->resultPageFactory = $resultPageFactory;
         $this->shopFinder	 = $shopFinder;

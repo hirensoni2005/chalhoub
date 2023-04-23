@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Block\Adminhtml\Shopfinder\Edit;
+namespace Hsoni\Shopfinder\Block\Adminhtml\Shopfinder\Edit;
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 

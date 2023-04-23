@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Controller\Adminhtml;
+namespace Hsoni\Shopfinder\Controller\Adminhtml;
 
 abstract class Shopfinder extends \Magento\Backend\App\Action
 {
 
-    const ADMIN_RESOURCE = 'Chalhoub_Shopfinder::top_level';
+    const ADMIN_RESOURCE = 'Hsoni_Shopfinder::top_level';
 
     /**
      * @var Registry

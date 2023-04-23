@@ -1,5 +1,5 @@
 {
-    "name": "chalhoub/module-shopfinder",
+    "name": "hsoni/module-shopfinder",
     "description": "Shopfinder Magento 2 Module",
     "type": "magento2-module",
     "authors": [
@@ -18,7 +18,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Chalhoub\\Shopfinder\\": ""
+            "Hsoni\\Shopfinder\\": ""
         }
     }
 }

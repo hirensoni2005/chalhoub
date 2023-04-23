@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Ui\Component\Listing\Column;
+namespace Hsoni\Shopfinder\Ui\Component\Listing\Column;
 
 use Magento\Catalog\Helper\Image;
 use Magento\Framework\Exception\NoSuchEntityException;

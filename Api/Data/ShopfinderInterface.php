@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Api\Data;
+namespace Hsoni\Shopfinder\Api\Data;
 
 interface ShopfinderInterface
 {
@@ -23,7 +23,7 @@ interface ShopfinderInterface
     /**
      * Set shopfinder_id
      * @param string $shopfinderId
-     * @return \Chalhoub\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
+     * @return \Hsoni\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
      */
     public function setShopfinderId($shopfinderId);
 
@@ -36,7 +36,7 @@ interface ShopfinderInterface
     /**
      * Set shop_name
      * @param string $shopName
-     * @return \Chalhoub\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
+     * @return \Hsoni\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
      */
     public function setShopName($shopName);
 
@@ -49,7 +49,7 @@ interface ShopfinderInterface
     /**
      * Set identifier
      * @param string $identifier
-     * @return \Chalhoub\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
+     * @return \Hsoni\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
      */
     public function setIdentifier($identifier);
 
@@ -62,7 +62,7 @@ interface ShopfinderInterface
     /**
      * Set country
      * @param string $country
-     * @return \Chalhoub\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
+     * @return \Hsoni\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
      */
     public function setCountry($country);
 
@@ -75,7 +75,7 @@ interface ShopfinderInterface
     /**
      * Set image
      * @param string $image
-     * @return \Chalhoub\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
+     * @return \Hsoni\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
      */
     public function setImage($image);
 
@@ -88,7 +88,7 @@ interface ShopfinderInterface
     /**
      * Set longitude
      * @param string $longitude
-     * @return \Chalhoub\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
+     * @return \Hsoni\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
      */
     public function setLongitude($longitude);
 
@@ -101,7 +101,7 @@ interface ShopfinderInterface
     /**
      * Set latitude
      * @param string $latitude
-     * @return \Chalhoub\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
+     * @return \Hsoni\Shopfinder\Shopfinder\Api\Data\ShopfinderInterface
      */
     public function setLatitude($latitude);
 }

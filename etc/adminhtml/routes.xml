@@ -2,10 +2,10 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
 	<router id="admin">
 		<route id="shopfinder" frontName="shopfinder">
-			<module name="Chalhoub_Shopfinder" before="Magento_Backend"/>
+			<module name="Hsoni_Shopfinder" before="Magento_Backend"/>
 		</route>
 		<route frontName="chalhoub_shopfinder" id="chalhoub_shopfinder">
-			<module before="Magento_Backend" name="Chalhoub_Shopfinder"/>
+			<module before="Magento_Backend" name="Hsoni_Shopfinder"/>
 		</route>
 	</router>
 </config>

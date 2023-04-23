@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Model;
+namespace Hsoni\Shopfinder\Model;
 
-class ShopfinderManagement implements \Chalhoub\Shopfinder\Api\ShopfinderManagementInterface
+class ShopfinderManagement implements \Hsoni\Shopfinder\Api\ShopfinderManagementInterface
 {
 
     /**

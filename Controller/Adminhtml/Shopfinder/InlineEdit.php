@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Chalhoub\Shopfinder\Controller\Adminhtml\Shopfinder;
+namespace Hsoni\Shopfinder\Controller\Adminhtml\Shopfinder;
 
 class InlineEdit extends \Magento\Backend\App\Action
 {
@@ -18,12 +18,12 @@ class InlineEdit extends \Magento\Backend\App\Action
     /**
      * @param \Magento\Backend\App\Action\Context $context
      * @param \Magento\Framework\Controller\Result\JsonFactory $jsonFactory
-     * @param \Chalhoub\Shopfinder\Model\Shopfinder $shopFinder
+     * @param \Hsoni\Shopfinder\Model\Shopfinder $shopFinder
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\Controller\Result\JsonFactory $jsonFactory,
-        \Chalhoub\Shopfinder\Model\ShopfinderFactory $shopFinder
+        \Hsoni\Shopfinder\Model\ShopfinderFactory $shopFinder
     ) {
         parent::__construct($context);
         $this->jsonFactory = $jsonFactory;
@@ -49,7 +49,7 @@ class InlineEdit extends \Magento\Backend\App\Action
                 $error = true;
             } else {
                 foreach (array_keys($postItems) as $modelid) {
-                    /** @var \Chalhoub\Shopfinder\Model\Shopfinder $model */
+                    /** @var \Hsoni\Shopfinder\Model\Shopfinder $model */
                     $model = $this->shopFinder->create()->load($modelid);
                     try {
                         $model->setData(array_merge($model->getData(), $postItems[$modelid]));
