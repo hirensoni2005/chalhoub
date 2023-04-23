@@ -2,6 +2,7 @@
     "name": "hsoni/module-shopfinder",
     "description": "Shopfinder Magento 2 Module",
     "type": "magento2-module",
+    "license": "GPL-3.0",
     "authors": [
         {
             "name": "Hiren",
