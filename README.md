@@ -60,15 +60,8 @@ mutation {
 Delete shop query format
 ```
 mutation {
-    updateShop(
-        input:{
-            shopfinder_id  :3,
-            identifier  :"shop-identifier", 
-            shop_name  :"New shop name", 
-            country  :"UAE",
-            longitude  :"122.232123",
-            latitude  :"123.232",   
-        }
+    deleteShop(
+        shopfinder_id: 10
     ){
         message
     }
