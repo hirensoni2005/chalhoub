@@ -1,0 +1,40 @@
+type Query {
+    shopfinder (
+        shopfinder_id: Int @doc(description: "Query by shopfinder_id.")
+        identifier: String @doc(description: "Query by Shopp identifier.")
+    ) : Shopfinder @resolver( class: "Chalhoub\\Shopfinder\\Model\\Resolver\\Shopfinder")
+    shopfinderList: ShopfinderList @resolver ( class: "Chalhoub\\Shopfinder\\Model\\Resolver\\Shopfinder")
+}
+
+type ShopfinderList @doc(description: "Shopfinder List") {
+    shoplist: [Shopfinder] @doc(description: "Shopfinder items")
+}
+
+type Shopfinder {
+    shopfinder_id  : Int  @doc(description: "Shop id.") 
+    shop_name: String  @doc(description: "Shop name.") 
+    identifier: String  @doc(description: "Shop identifier.") 
+    country: String  @doc(description: "Shop country.") 
+    image: String  @doc(description: "Shop image.") 
+    longitude: String  @doc(description: "Shop longitude.")
+    latitude: String  @doc(description: "Shop latitude.") 
+}
+
+
+type Mutation {
+    editShopfinder(input: shopfinderInput!): ShopfinderOutput @resolver(class: "\\Chalhoub\\Shopfinder\\Model\\Resolver\\ShopfinderUpdate") @doc(description:"Notify your interest")
+}
+
+input shopfinderInput {
+    shopfinder_id: Int  @doc(description: "Shop id.") 
+    identifier: String  @doc(description: "Shop identifier.") 
+    shop_name: String  @doc(description: "Shop name.") 
+    country: String  @doc(description: "Shop country.") 
+    image: String  @doc(description: "Shop image.") 
+    longitude: String  @doc(description: "Shop longitude.")
+    latitude: String  @doc(description: "Shop latitude.") 
+}
+
+type ShopfinderOutput {
+   message: String @doc(description: "Shop latitude.")
+}
