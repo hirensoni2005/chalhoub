@@ -31,7 +31,7 @@ type Mutation {
 
     deleteShop(
         shopfinder_id: Int @doc(description: "Shop id.")
-    ): ShopfinderOutput @resolver(class: "Hsoni\\ShopFinder\\Model\\Resolver\\DeleteShop") @doc(description: "Delete Shop")
+    ): ShopfinderOutput @resolver(class: "Hsoni\\Shopfinder\\Model\\Resolver\\DeleteShop") @doc(description: "Delete Shop")
 }
 
 input shopfinderInput {
